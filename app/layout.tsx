@@ -1,33 +1,33 @@
-import { Urbanist } from "next/font/google";
-import * as React from "react";
+import { Urbanist } from "next/font/google"
+import * as React from "react"
 
-import "./globals.css";
-import ToastProvider from "@/providers/toast-provider";
-import ModalProvider from "@/providers/modal-provider";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/Footer";
+import "./globals.css"
+import ToastProvider from "@/providers/toast-provider"
+import ModalProvider from "@/providers/modal-provider"
+import Navbar from "@/components/navbar"
+import Footer from "@/components/Footer"
 
-const font = Urbanist({ subsets: ["latin"] });
+const font = Urbanist({ subsets: ["latin"] })
 
 export const metadata = {
-	title: "Store",
-	description: "Store - The place for all your purchases."
-};
+  title: "Zhafirah Collection",
+  description: "Zhafirah Collection Shop",
+}
 
 export default function RootLayout({
-	children
+  children,
 }: {
-	children: React.ReactNode;
+  children: React.ReactNode
 }) {
-	return (
-		<html lang="en">
-			<body className={font.className}>
-				<ToastProvider />
-				<ModalProvider />
-				<Navbar />
-				{children}
-				<Footer />
-			</body>
-		</html>
-	);
+  return (
+    <html lang="en">
+      <body className={font.className}>
+        <ToastProvider />
+        <ModalProvider />
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  )
 }
